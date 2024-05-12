@@ -44,10 +44,6 @@ instead, 1rem = 1em = 16px*/
 
 /*1200px*/
 @media (max-width: 75em) {
-  html {
-    /* (8px/16px) = 0.5  ==> 50%*/
-    font-size: 48%;
-  }
   .main-nav-list {
     gap: 3.2rem;
   }
@@ -73,6 +69,8 @@ instead, 1rem = 1em = 16px*/
   }
 
   .gallary {
+    align-content: center;
+    justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
   }
@@ -87,10 +85,32 @@ instead, 1rem = 1em = 16px*/
   }
 }
 
+/*1150px*/
+@media (max-width: 73em) {
+  .price-feature-title {
+    font-size: 1.8rem;
+  }
+
+  .hero {
+    max-width: 108rem;
+  }
+  .container {
+    max-width: 103rem;
+  }
+}
+
 /***************/
 /*  Tablets   */
 /*************/
 /*The design does not behave well with 768px to 1024px*/
+
+/*981px*/
+@media (max-width: 62em) {
+  html {
+    /* (8px/16px) = 0.5  ==> 50%*/
+    font-size: 48%;
+  }
+}
 
 /*780px*/
 @media (max-width: 48.75em) {
@@ -115,7 +135,7 @@ instead, 1rem = 1em = 16px*/
   }
 
   .logos img {
-    height: 2.2rem;
+    height: 2.4rem;
     filter: brightness(0);
     opacity: 50%;
   }
@@ -162,12 +182,10 @@ instead, 1rem = 1em = 16px*/
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
-    z-index: 9999;
   }
 
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.97);
     position: absolute;
     top: 0;
     left: 0;
@@ -178,7 +196,10 @@ instead, 1rem = 1em = 16px*/
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in;
+    transition: all 0.8s ease-out;
+    /* Hide navigation */
+    /* Allow no transition */
+    /* display: none; */
 
     /* 1) Hide it visually */
     opacity: 0;
@@ -272,6 +293,10 @@ instead, 1rem = 1em = 16px*/
   .cta-signup {
     padding: 3rem 4rem 4rem 4rem;
   }
+
+  .logos img {
+    height: 2.2rem;
+  }
 }
 
 /*************/
@@ -282,20 +307,6 @@ instead, 1rem = 1em = 16px*/
 /* 550px */
 
 @media (max-width: 34.5em) {
-  html {
-    font-size: 46.5%;
-  }
-
-  .delivered-meals {
-    flex-direction: column;
-    gap: 2.4rem;
-    margin-top: 4.8rem;
-  }
-
-  .step-number {
-    font-size: 6.2rem;
-  }
-
   .heading-primary {
     font-size: 4rem;
   }
@@ -393,5 +404,22 @@ instead, 1rem = 1em = 16px*/
 
   .price-feature {
     padding-left: 5rem;
+  }
+}
+
+/* 480px */
+@media (max-width: 30em) {
+  html {
+    font-size: 46.5%;
+  }
+
+  .delivered-meals {
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-top: 4.8rem;
+  }
+
+  .step-number {
+    font-size: 6.2rem;
   }
 }
